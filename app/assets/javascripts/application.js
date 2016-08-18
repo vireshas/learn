@@ -17,6 +17,7 @@
 //= require react_ujs
 //= require jquery_ujs
 //= require components
+//= require materialize.min
 //= require_tree .
 //= require_self
 //= stub bundle
