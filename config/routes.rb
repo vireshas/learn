@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get "/logout", :to => 'devise/sessions#destroy' , as: :logout
   end
 
-  root :to => "welcome#home"
-  get 'welcome/index'
+  authenticate :user do
+    root :to => "welcome#home"
+    get 'welcome/index'
+  end
 end

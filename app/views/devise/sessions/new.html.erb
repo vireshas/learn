@@ -1,4 +1,4 @@
-<div class='row' style=margin-top:120px>
+<div class='row' style=margin-top:100px>
   <div class='col s3' > </div>
   <div class='col s6' >
 
@@ -8,10 +8,15 @@
         <span class='card-title'> Log in </span>
 
         <%- flash.each do |name, msg| -%>
-          <%= name %> <%= msg %>
-          <div class='card-panel red'>
-            <span class="white-text text-darken-2"> <%= msg.downcase.capitalize %> </span>
-          </div>
+          <% if name == 'notice' %>
+            <div class='card-panel green'>
+              <span class="white-text text-darken-2"> <%= msg.downcase.capitalize %> </span>
+            </div>
+          <% else %>
+            <div class='card-panel red'>
+              <span class="white-text text-darken-2"> <%= msg.downcase.capitalize %> </span>
+            </div>
+          <% end %>
         <%- end -%>
 
         <div class='card-action'>
@@ -45,5 +50,13 @@
       </div>
 
     </div>
+    <footer>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 by Viresh
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
   </div>
 </div>
