@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Count from '../components/Count'
+import Admin from '../components/Admin'
 import { add } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,9 +18,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 
-const Counter = connect(
+const AdminContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Count)
+)(Admin)
 
-export default Counter
+export default AdminContainer
